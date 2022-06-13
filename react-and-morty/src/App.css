@@ -1,0 +1,260 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  ol,
+  ul,
+  li {
+    list-style: none;
+    display: block;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  input,
+  textarea,
+  select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 0;
+  }
+  
+  body {
+    overflow-x: hidden;
+    font-size: 20px;
+       
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+  }
+  
+  .description{
+    margin: 50px 100px;
+  }
+  .button button{
+    font-family: 'get_schwiftyregular';
+    margin: 20px;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 20px;
+
+    transition: all 0.5s ease;
+    background-color: rgb(248,246,100);
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  .button button:hover {
+    animation: shake 0.7s;
+    animation-iteration-count: infinite;
+
+    background-color: rgb(106, 177, 35);
+    color: #000;
+  }
+  
+  .divContainer{
+    text-align: center;
+  }
+
+  .characterHolder {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  }
+
+  h1{
+    font-family: 'get_schwiftyregular';
+    padding: 15px;
+    font-size: 60px;
+  }
+  
+  p, div {
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 2px;
+  }
+
+
+  @font-face {
+    font-family: 'get_schwiftyregular';
+    src: url('font/get_schwifty-webfont.woff2') format('woff2'),
+         url('font/get_schwifty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+.cards {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 10px 10px;
+  /* position: relative; */
+  max-width: 250px;
+  max-height: 350px;
+  box-shadow: 0 10px 30px -6px rgb(131, 133, 129);
+ 
+}
+
+
+.card-title {
+  display: block;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(248,246,100);
+  color: rgb(120,68,29);
+  padding: 2%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  margin-bottom: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.7;
+}
+
+.card-desc {
+  display: block;
+  font-size: 18px;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  padding: 18px 14%;
+  background-color: white;
+  overflow-y: scroll;
+  overflow: auto;
+  transition: 0.8s ease;
+}
+
+/*
+.card:hover .card-desc {
+  opacity: 1;
+  height: fit-content;
+}
+*/
+
+.card-desc-show {
+  display: block;
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 18px 14%;
+  background-color: white;
+  overflow-y: scroll;
+  overflow: auto;
+  transition: 0.8s ease;
+
+  opacity: 1;
+  height: fit-content;
+}
+
+.charName {
+  font-weight: bold;
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+.counterBtn, .count{
+  margin: 20px;
+  font-size: 30px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  padding: 10px;
+
+}
+.counterBtn:hover{
+  animation: shake 0.7s;
+    animation-iteration-count: infinite;
+    background-color: rgb(106, 177, 35);
+    color: #000;
+}
+
+.location_bg{
+  opacity: 0.5;
+}
+
+/* ====== Pagination ====== */
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  margin: auto 20px;
+  background-color: rgb(248,246,100);
+  font-family: 'get_schwiftyregular';
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  animation: shake 0.7s;
+  animation-iteration-count: infinite;
+
+  background-color: rgb(106, 177, 35);
+  color: #000;
+}
+
